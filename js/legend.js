@@ -1,0 +1,25 @@
+export default function legend(selector, colors = []) {
+    selector.append('circle')
+        .attr('id', 'legend')
+        .attr('cx', 340)
+        .attr('cy', 40)
+        .attr('r', 5)
+        .attr('fill', colors[0])
+        .attr('stroke', '#333');
+    selector.append('circle')
+        .attr('cx', 340)
+        .attr('cy', 65)
+        .attr('r', 5)
+        .attr('fill', colors[1])
+        .attr('stroke', '#333');
+    selector.append('text')
+        .attr('x', 350)
+        .attr('y', 43)
+        .attr('font-size', 10)
+        .text('no doping allegations')
+    selector.append('text')
+        .attr('x', 350)
+        .attr('y', 68)
+        .attr('font-size', 10)
+        .text('rider with doping allegations')
+}
